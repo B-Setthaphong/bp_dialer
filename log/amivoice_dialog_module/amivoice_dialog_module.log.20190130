@@ -1,0 +1,1601 @@
+# Logfile created on 2019-01-30 10:09:53 +0700 by logger.rb/61378
+[2019-01-30 10:09:53.747 #1661] INFO : Initializing DialogModule
+[2019-01-30 10:09:53.747 #1661] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-30 10:09:53.747 #1661] INFO :   rack_env                       : development
+[2019-01-30 10:09:53.747 #1661] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-30 10:09:53.747 #1661] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-30 10:09:53.748 #1661] INFO :   default_external_encoding      : UTF-8
+[2019-01-30 10:09:53.748 #1661] INFO :   default_internal_encoding      : UTF-8
+[2019-01-30 10:09:53.748 #1661] INFO :   language                       : th-TH
+[2019-01-30 10:09:53.748 #1661] INFO :   platform                       : avaya
+[2019-01-30 10:09:53.748 #1661] INFO :   redis_server                   : localhost
+[2019-01-30 10:09:53.748 #1661] INFO :   redis_server_port              : 6379
+[2019-01-30 10:09:53.748 #1661] INFO :   audio_prompt_path              : /prompts/
+[2019-01-30 10:09:53.748 #1661] INFO :   grammar_path                   : /grammars/
+[2019-01-30 10:09:53.749 #1661] INFO :   enable_tuning_tools            : false
+[2019-01-30 10:09:53.749 #1661] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-30 10:09:53.749 #1661] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-30 10:09:53.749 #1661] INFO :   log_level                      : info
+[2019-01-30 10:09:53.749 #1661] INFO :   enable_log_in_vxml             : true
+[2019-01-30 10:09:53.749 #1661] INFO :   log_http_method                : get
+[2019-01-30 10:09:53.749 #1661] INFO :   is_a_part_of_call_flow         : false
+[2019-01-30 10:09:53.749 #1661] INFO :   mmivr_enable                   : false
+[2019-01-30 10:09:53.750 #1661] INFO :   gvp_extension_enable           : false
+[2019-01-30 10:09:53.750 #1661] INFO :   say_command                    : /usr/bin/say
+[2019-01-30 10:09:53.750 #1661] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-30 10:09:53.750 #1661] INFO :   use_server_time                : true
+[2019-01-30 10:09:53.750 #1661] INFO :   keep_vxml                      : false
+[2019-01-30 10:09:53.750 #1661] INFO :   enable_prompt_log              : false
+[2019-01-30 10:09:53.750 #1661] INFO :   use_json                       : true
+[2019-01-30 10:09:53.750 #1661] INFO :   next_main_enabled              : true
+[2019-01-30 10:09:53.750 #1661] INFO :   session_expire_sec             : 86400
+[2019-01-30 10:09:53.750 #1661] INFO :   enable_prompt_uploader         : false
+[2019-01-30 10:09:53.750 #1661] INFO :   enable_dialog_console          : false
+[2019-01-30 10:09:53.750 #1661] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-30 10:09:53.755 #1661] INFO : Initializing application
+[2019-01-30 10:09:53.755 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-30 10:09:53.756 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-30 10:09:53.756 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-30 10:09:53.757 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-30 10:09:53.758 #1661] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-30 10:09:53.760 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-30 10:09:53.763 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-30 10:09:53.765 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-30 10:09:53.765 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-30 10:09:53.765 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-30 10:09:53.766 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-30 10:09:53.766 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-30 10:09:53.767 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-30 10:09:53.767 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-30 10:09:53.767 #1661] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-30 10:09:53.767 #1661] INFO : Connecting to Redis server localhost:6379
+[2019-01-30 14:33:57.749 #11134] INFO : Initializing DialogModule
+[2019-01-30 14:33:57.749 #11134] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-30 14:33:57.749 #11134] INFO :   rack_env                       : development
+[2019-01-30 14:33:57.750 #11134] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-30 14:33:57.750 #11134] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-30 14:33:57.750 #11134] INFO :   default_external_encoding      : UTF-8
+[2019-01-30 14:33:57.750 #11134] INFO :   default_internal_encoding      : UTF-8
+[2019-01-30 14:33:57.750 #11134] INFO :   language                       : th-TH
+[2019-01-30 14:33:57.750 #11134] INFO :   platform                       : avaya
+[2019-01-30 14:33:57.750 #11134] INFO :   redis_server                   : localhost
+[2019-01-30 14:33:57.750 #11134] INFO :   redis_server_port              : 6379
+[2019-01-30 14:33:57.750 #11134] INFO :   audio_prompt_path              : /prompts/
+[2019-01-30 14:33:57.750 #11134] INFO :   grammar_path                   : /grammars/
+[2019-01-30 14:33:57.751 #11134] INFO :   enable_tuning_tools            : false
+[2019-01-30 14:33:57.751 #11134] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-30 14:33:57.751 #11134] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-30 14:33:57.751 #11134] INFO :   log_level                      : info
+[2019-01-30 14:33:57.751 #11134] INFO :   enable_log_in_vxml             : true
+[2019-01-30 14:33:57.751 #11134] INFO :   log_http_method                : get
+[2019-01-30 14:33:57.751 #11134] INFO :   is_a_part_of_call_flow         : false
+[2019-01-30 14:33:57.751 #11134] INFO :   mmivr_enable                   : false
+[2019-01-30 14:33:57.751 #11134] INFO :   gvp_extension_enable           : false
+[2019-01-30 14:33:57.751 #11134] INFO :   say_command                    : /usr/bin/say
+[2019-01-30 14:33:57.751 #11134] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-30 14:33:57.752 #11134] INFO :   use_server_time                : true
+[2019-01-30 14:33:57.752 #11134] INFO :   keep_vxml                      : false
+[2019-01-30 14:33:57.752 #11134] INFO :   enable_prompt_log              : false
+[2019-01-30 14:33:57.752 #11134] INFO :   use_json                       : true
+[2019-01-30 14:33:57.752 #11134] INFO :   next_main_enabled              : true
+[2019-01-30 14:33:57.752 #11134] INFO :   session_expire_sec             : 86400
+[2019-01-30 14:33:57.752 #11134] INFO :   enable_prompt_uploader         : false
+[2019-01-30 14:33:57.752 #11134] INFO :   enable_dialog_console          : false
+[2019-01-30 14:33:57.752 #11134] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-30 14:33:57.754 #11134] INFO : Initializing application
+[2019-01-30 14:33:57.754 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-30 14:33:57.754 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-30 14:33:57.754 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-30 14:33:57.755 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-30 14:33:57.755 #11134] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-30 14:33:57.756 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-30 14:33:57.759 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-30 14:33:57.761 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-30 14:33:57.761 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-30 14:33:57.762 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-30 14:33:57.762 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-30 14:33:57.763 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-30 14:33:57.763 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-30 14:33:57.763 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-30 14:33:57.764 #11134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-30 14:33:57.764 #11134] INFO : Connecting to Redis server localhost:6379
+[2019-01-30 14:34:19.803 #11134] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019030073420-2
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548319958709
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-30 14:34:19.916 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:34:19.989 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073420-2
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-30 14:34:20.006 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030073420-2
+  request_parameters_key : e31505df-200b-4842-b3b8-15f831f35d96
+}[0m
+[2019-01-30 14:34:20.009 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) ANI: 10008[0m
+[2019-01-30 14:34:20.010 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) DNIS: 201[0m
+[2019-01-30 14:34:20.010 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) LoggingTag: AAEP-2019030073420-2[0m
+[2019-01-30 14:34:20.010 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) Environment: development[0m
+[2019-01-30 14:34:20.010 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) Request: {"session___sessionid"=>"AAEP-2019030073420-2", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548319958709", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-30 14:34:20.010 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:20.019 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030073420-2
+  request_parameters_key : e31505df-200b-4842-b3b8-15f831f35d96
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-30 14:34:20.048 #11134] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 14:34:20.048 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:20.077 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:34:20.119 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Wed Jan 30 2019 14:34:20 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030073420-2
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 14:34:32.506 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.705000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030073420-2
+  main_debug.nLogPower        : 35
+  main_debug.result           : -emp=1:grp=2
+  main_debug.sLogPower        : 74
+  main_debug.snr              : 38
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=1:grp=2
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : พร
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 14:34:32.515 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.705000
+  logging_tag : AAEP-2019030073420-2
+  result      : -emp=1:grp=2
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 14:34:32.516 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) confirmation_method_server[0m
+[2019-01-30 14:34:32.516 #11134] INFO : (AAEP-2019030073420-2) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 14:34:32.516 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:32.531 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 14:34:20 GMT+0700
+  logging_tag       : AAEP-2019030073420-2
+  result            : -emp=1:grp=2
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 14:34:32.542 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test : -emp=1:grp=2[0m
+[2019-01-30 14:34:32.542 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:34:32.543 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test : -emp=1:grp=2[0m
+[2019-01-30 14:34:32.543 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:34:32.543 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test : -emp=1:grp=2[0m
+[2019-01-30 14:34:32.544 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:34:32.544 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test : -emp=1:grp=2[0m
+[2019-01-30 14:34:32.544 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:34:32.549 #11134] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 14:34:32.549 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:32.567 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:34:32.609 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030073420-2
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_1.wav
+  next_prompts.2      : prompts/th-TH/emp_1.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 14:34:41.166 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.552000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030073420-2
+  main_debug.nLogPower        : 26
+  main_debug.result           : Yes
+  main_debug.sLogPower        : 78
+  main_debug.snr              : 52
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : Yes
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ถูก
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 14:34:41.181 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 13125
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : Yes
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019030073420-2
+  result                                   : -emp=1:grp=2
+  retry_count.confirmation_no              : 0
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 0
+  status_message                           : Confirmation Yes
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 14:34:41.193 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/action (Client Request)
+params => {
+  confidence                      : 0.705000
+  confirmation_played_prompts.0.0 : 13125
+  confirmation_played_prompts.0.1 : init1
+  dialog_end_time                 : Wed Jan 30 2019 14:34:41 GMT+0700
+  dialog_result                   : S
+  dialog_start_time               : Wed Jan 30 2019 14:34:20 GMT+0700
+  last_input_method               : voice
+  logging_tag                     : AAEP-2019030073420-2
+  played_prompts.0.0              : 634
+  played_prompts.0.1              : init1
+  result                          : -emp=1:grp=2
+  retry_counts_json               : [{"main": {"retry": 0,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 0}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}}]
+  utterance                       : พร
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-30 14:34:41.193 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) action[0m
+[2019-01-30 14:34:41.193 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) -emp=1:grp=2[0m
+[2019-01-30 14:34:41.194 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) transfer_to_emp[0m
+[2019-01-30 14:34:41.194 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) emp_1[0m
+[2019-01-30 14:34:41.194 #11134] INFO : [0;94;49m(AAEP-2019030073420-2) [0m
+[2019-01-30 14:34:41.194 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:41.197 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:41.207 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073420-2
+  result         : -emp=1:grp=2
+  status_message : Dialog End - amivoice_transfer_block.vxml
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 14:34:41.218 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /amivoice_transfer_block.vxml (Client Request)
+params => {
+  ani         : 10008
+  dnis        : 201
+  logging_tag : AAEP-2019030073420-2
+  dialog_name : amivoice_transfer_block
+}[0m
+[2019-01-30 14:34:41.221 #11134] INFO : (AAEP-2019030073420-2) Session information is saving into redis
+[2019-01-30 14:34:41.241 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:34:41.256 #11134] INFO : [0;33;49m(AAEP-2019030073420-2) GET /amivoice_transfer_block/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073420-2
+  status_message : Too many errors emp_1
+  dialog_name    : amivoice_transfer_block
+}[0m
+[2019-01-30 14:34:55.716 #11134] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019030073456-18
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548319958709
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-30 14:34:55.791 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:34:55.810 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073456-18
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-30 14:34:55.819 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030073456-18
+  request_parameters_key : 87edafef-83a5-4ed3-a42f-f2028ccd9f87
+}[0m
+[2019-01-30 14:34:55.821 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) ANI: 10008[0m
+[2019-01-30 14:34:55.822 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) DNIS: 201[0m
+[2019-01-30 14:34:55.822 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) LoggingTag: AAEP-2019030073456-18[0m
+[2019-01-30 14:34:55.822 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) Environment: development[0m
+[2019-01-30 14:34:55.822 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) Request: {"session___sessionid"=>"AAEP-2019030073456-18", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548319958709", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-30 14:34:55.823 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:34:55.829 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030073456-18
+  request_parameters_key : 87edafef-83a5-4ed3-a42f-f2028ccd9f87
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-30 14:34:55.851 #11134] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 14:34:55.851 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:34:55.881 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:34:55.912 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Wed Jan 30 2019 14:34:56 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030073456-18
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 14:35:08.426 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.774000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030073456-18
+  main_debug.nLogPower        : 43
+  main_debug.result           : -emp=1:grp=2
+  main_debug.sLogPower        : 76
+  main_debug.snr              : 32
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=1:grp=2
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : พร
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 14:35:08.436 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.774000
+  logging_tag : AAEP-2019030073456-18
+  result      : -emp=1:grp=2
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 14:35:08.438 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) confirmation_method_server[0m
+[2019-01-30 14:35:08.438 #11134] INFO : (AAEP-2019030073456-18) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 14:35:08.438 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:35:08.452 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 14:34:56 GMT+0700
+  logging_tag       : AAEP-2019030073456-18
+  result            : -emp=1:grp=2
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 14:35:08.463 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test : -emp=1:grp=2[0m
+[2019-01-30 14:35:08.463 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:35:08.463 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test : -emp=1:grp=2[0m
+[2019-01-30 14:35:08.464 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:35:08.464 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test : -emp=1:grp=2[0m
+[2019-01-30 14:35:08.464 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:35:08.464 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test : -emp=1:grp=2[0m
+[2019-01-30 14:35:08.464 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) test emp value : emp_1 | dep value : [0m
+[2019-01-30 14:35:08.469 #11134] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 14:35:08.469 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:35:08.498 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:35:08.529 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030073456-18
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_1.wav
+  next_prompts.2      : prompts/th-TH/emp_1.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 14:35:16.757 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.00000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030073456-18
+  main_debug.nLogPower        : 49
+  main_debug.result           : Yes
+  main_debug.sLogPower        : 76
+  main_debug.snr              : 26
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : Yes
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ถูก
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 14:35:16.767 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.00000
+  confidence_threshold        : 0.100000
+  logging_tag                 : AAEP-2019030073456-18
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Nomatch(rejected by confidence)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 14:35:16.777 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073456-18
+  next_prompts.0 : prompts/th-TH/sorry_i_cannot_understand_you.wav
+  next_prompts.1 : prompts/th-TH/title_1.wav
+  next_prompts.2 : prompts/th-TH/emp_1.wav
+  next_prompts.3 : prompts/th-TH/.wav
+  next_prompts.4 : prompts/th-TH/is_it_correct.wav
+  status_message : Filled - Rejected by confidence score(Reprompt)
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 14:35:25.323 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.397000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030073456-18
+  main_debug.nLogPower        : 47
+  main_debug.result           : Yes
+  main_debug.sLogPower        : 82
+  main_debug.snr              : 34
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : Yes
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 1
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : ถูก
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 14:35:25.336 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 14045
+  confirmation.played_prompts.0.1          : init1
+  confirmation.played_prompts.1.0          : 22295
+  confirmation.played_prompts.1.1          : retry1
+  confirmation.result                      : Yes
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 1
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 1
+  logging_tag                              : AAEP-2019030073456-18
+  result                                   : -emp=1:grp=2
+  retry_count.confirmation_no              : 0
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 0
+  status_message                           : Confirmation Yes
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 14:35:25.349 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/action (Client Request)
+params => {
+  confidence                      : 0.774000
+  confirmation_played_prompts.0.0 : 14045
+  confirmation_played_prompts.0.1 : init1
+  confirmation_played_prompts.1.0 : 22295
+  confirmation_played_prompts.1.1 : retry1
+  dialog_end_time                 : Wed Jan 30 2019 14:35:25 GMT+0700
+  dialog_result                   : S
+  dialog_start_time               : Wed Jan 30 2019 14:34:56 GMT+0700
+  last_input_method               : voice
+  logging_tag                     : AAEP-2019030073456-18
+  played_prompts.0.0              : 428
+  played_prompts.0.1              : init1
+  result                          : -emp=1:grp=2
+  retry_counts_json               : [{"main": {"retry": 0,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 0}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 1,"reject": 0,"retry": 1}}]
+  utterance                       : พร
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-30 14:35:25.350 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) action[0m
+[2019-01-30 14:35:25.350 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) -emp=1:grp=2[0m
+[2019-01-30 14:35:25.351 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) transfer_to_emp[0m
+[2019-01-30 14:35:25.351 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) emp_1[0m
+[2019-01-30 14:35:25.351 #11134] INFO : [0;94;49m(AAEP-2019030073456-18) [0m
+[2019-01-30 14:35:25.351 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:35:25.353 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:35:25.364 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073456-18
+  result         : -emp=1:grp=2
+  status_message : Dialog End - amivoice_transfer_block.vxml
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 14:35:25.371 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /amivoice_transfer_block.vxml (Client Request)
+params => {
+  ani         : 10008
+  dnis        : 201
+  logging_tag : AAEP-2019030073456-18
+  dialog_name : amivoice_transfer_block
+}[0m
+[2019-01-30 14:35:25.376 #11134] INFO : (AAEP-2019030073456-18) Session information is saving into redis
+[2019-01-30 14:35:25.386 #11134] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 14:35:25.400 #11134] INFO : [0;33;49m(AAEP-2019030073456-18) GET /amivoice_transfer_block/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030073456-18
+  status_message : Too many errors emp_1
+  dialog_name    : amivoice_transfer_block
+}[0m
+[2019-01-30 14:36:00.512 #11389] INFO : Initializing DialogModule
+[2019-01-30 14:36:00.512 #11389] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-30 14:36:00.512 #11389] INFO :   rack_env                       : development
+[2019-01-30 14:36:00.512 #11389] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-30 14:36:00.512 #11389] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-30 14:36:00.512 #11389] INFO :   default_external_encoding      : UTF-8
+[2019-01-30 14:36:00.512 #11389] INFO :   default_internal_encoding      : UTF-8
+[2019-01-30 14:36:00.512 #11389] INFO :   language                       : th-TH
+[2019-01-30 14:36:00.513 #11389] INFO :   platform                       : avaya
+[2019-01-30 14:36:00.513 #11389] INFO :   redis_server                   : localhost
+[2019-01-30 14:36:00.513 #11389] INFO :   redis_server_port              : 6379
+[2019-01-30 14:36:00.513 #11389] INFO :   audio_prompt_path              : /prompts/
+[2019-01-30 14:36:00.513 #11389] INFO :   grammar_path                   : /grammars/
+[2019-01-30 14:36:00.513 #11389] INFO :   enable_tuning_tools            : false
+[2019-01-30 14:36:00.513 #11389] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-30 14:36:00.513 #11389] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-30 14:36:00.513 #11389] INFO :   log_level                      : info
+[2019-01-30 14:36:00.513 #11389] INFO :   enable_log_in_vxml             : true
+[2019-01-30 14:36:00.513 #11389] INFO :   log_http_method                : get
+[2019-01-30 14:36:00.513 #11389] INFO :   is_a_part_of_call_flow         : false
+[2019-01-30 14:36:00.514 #11389] INFO :   mmivr_enable                   : false
+[2019-01-30 14:36:00.514 #11389] INFO :   gvp_extension_enable           : false
+[2019-01-30 14:36:00.514 #11389] INFO :   say_command                    : /usr/bin/say
+[2019-01-30 14:36:00.514 #11389] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-30 14:36:00.514 #11389] INFO :   use_server_time                : true
+[2019-01-30 14:36:00.514 #11389] INFO :   keep_vxml                      : false
+[2019-01-30 14:36:00.514 #11389] INFO :   enable_prompt_log              : false
+[2019-01-30 14:36:00.514 #11389] INFO :   use_json                       : true
+[2019-01-30 14:36:00.514 #11389] INFO :   next_main_enabled              : true
+[2019-01-30 14:36:00.514 #11389] INFO :   session_expire_sec             : 86400
+[2019-01-30 14:36:00.514 #11389] INFO :   enable_prompt_uploader         : false
+[2019-01-30 14:36:00.514 #11389] INFO :   enable_dialog_console          : false
+[2019-01-30 14:36:00.515 #11389] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-30 14:36:00.516 #11389] INFO : Initializing application
+[2019-01-30 14:36:00.516 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-30 14:36:00.516 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-30 14:36:00.516 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-30 14:36:00.517 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-30 14:36:00.518 #11389] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-30 14:36:00.519 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-30 14:36:00.521 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-30 14:36:00.523 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-30 14:36:00.524 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-30 14:36:00.524 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-30 14:36:00.524 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-30 14:36:00.525 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-30 14:36:00.525 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-30 14:36:00.525 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-30 14:36:00.526 #11389] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-30 14:36:00.526 #11389] INFO : Connecting to Redis server localhost:6379
+[2019-01-30 15:08:20.346 #11389] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019030080820-5
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548319958709
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-30 15:08:20.416 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:08:20.437 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030080820-5
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-30 15:08:20.450 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030080820-5
+  request_parameters_key : bd03035d-30d7-4476-abd1-59b1d461a9bf
+}[0m
+[2019-01-30 15:08:20.454 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) ANI: 10008[0m
+[2019-01-30 15:08:20.454 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) DNIS: 201[0m
+[2019-01-30 15:08:20.454 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) LoggingTag: AAEP-2019030080820-5[0m
+[2019-01-30 15:08:20.454 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) Environment: development[0m
+[2019-01-30 15:08:20.455 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) Request: {"session___sessionid"=>"AAEP-2019030080820-5", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548319958709", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-30 15:08:20.456 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:20.466 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030080820-5
+  request_parameters_key : bd03035d-30d7-4476-abd1-59b1d461a9bf
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-30 15:08:20.490 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:08:20.490 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:20.519 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:08:20.561 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Wed Jan 30 2019 15:08:20 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030080820-5
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 15:08:34.129 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.612000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030080820-5
+  main_debug.nLogPower        : 53
+  main_debug.result           : -emp=1:grp=2
+  main_debug.sLogPower        : 76
+  main_debug.snr              : 22
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=1:grp=2
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : พร
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:08:34.142 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.612000
+  logging_tag : AAEP-2019030080820-5
+  result      : -emp=1:grp=2
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 15:08:34.143 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) confirmation_method_server[0m
+[2019-01-30 15:08:34.143 #11389] INFO : (AAEP-2019030080820-5) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 15:08:34.143 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:34.155 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 15:08:20 GMT+0700
+  logging_tag       : AAEP-2019030080820-5
+  result            : -emp=1:grp=2
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 15:08:34.168 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test : -emp=1:grp=2[0m
+[2019-01-30 15:08:34.168 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test emp value : emp_1 | dep value : [0m
+[2019-01-30 15:08:34.168 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test : -emp=1:grp=2[0m
+[2019-01-30 15:08:34.168 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test emp value : emp_1 | dep value : [0m
+[2019-01-30 15:08:34.169 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test : -emp=1:grp=2[0m
+[2019-01-30 15:08:34.169 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test emp value : emp_1 | dep value : [0m
+[2019-01-30 15:08:34.169 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test : -emp=1:grp=2[0m
+[2019-01-30 15:08:34.169 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) test emp value : emp_1 | dep value : [0m
+[2019-01-30 15:08:34.175 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:08:34.175 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:34.190 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:08:34.229 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030080820-5
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_1.wav
+  next_prompts.2      : prompts/th-TH/emp_1.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 15:08:42.802 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.651000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030080820-5
+  main_debug.nLogPower        : 22
+  main_debug.result           : Yes
+  main_debug.sLogPower        : 71
+  main_debug.snr              : 49
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : Yes
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ถูก ต้อง
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:08:42.814 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 14227
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : Yes
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019030080820-5
+  result                                   : -emp=1:grp=2
+  retry_count.confirmation_no              : 0
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 0
+  status_message                           : Confirmation Yes
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 15:08:42.830 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/action (Client Request)
+params => {
+  confidence                      : 0.612000
+  confirmation_played_prompts.0.0 : 14227
+  confirmation_played_prompts.0.1 : init1
+  dialog_end_time                 : Wed Jan 30 2019 15:08:42 GMT+0700
+  dialog_result                   : S
+  dialog_start_time               : Wed Jan 30 2019 15:08:20 GMT+0700
+  last_input_method               : voice
+  logging_tag                     : AAEP-2019030080820-5
+  played_prompts.0.0              : 555
+  played_prompts.0.1              : init1
+  result                          : -emp=1:grp=2
+  retry_counts_json               : [{"main": {"retry": 0,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 0}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}}]
+  utterance                       : พร
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-30 15:08:42.831 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) action[0m
+[2019-01-30 15:08:42.831 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) -emp=1:grp=2[0m
+[2019-01-30 15:08:42.831 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) transfer_to_emp[0m
+[2019-01-30 15:08:42.831 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) emp_1[0m
+[2019-01-30 15:08:42.831 #11389] INFO : [0;94;49m(AAEP-2019030080820-5) [0m
+[2019-01-30 15:08:42.831 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:42.833 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:42.842 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030080820-5
+  result         : -emp=1:grp=2
+  status_message : Dialog End - amivoice_transfer_block.vxml
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 15:08:42.850 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /amivoice_transfer_block.vxml (Client Request)
+params => {
+  ani         : 10008
+  dnis        : 201
+  logging_tag : AAEP-2019030080820-5
+  dialog_name : amivoice_transfer_block
+}[0m
+[2019-01-30 15:08:42.851 #11389] INFO : (AAEP-2019030080820-5) Session information is saving into redis
+[2019-01-30 15:08:42.862 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:08:42.875 #11389] INFO : [0;33;49m(AAEP-2019030080820-5) GET /amivoice_transfer_block/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030080820-5
+  status_message : Too many errors emp_1
+  dialog_name    : amivoice_transfer_block
+}[0m
+[2019-01-30 15:31:14.409 #11389] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019030083114-17
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548319958709
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-30 15:31:14.472 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:31:14.497 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030083114-17
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-30 15:31:14.511 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030083114-17
+  request_parameters_key : d392a453-00e2-4cce-8845-63908c9ca6d0
+}[0m
+[2019-01-30 15:31:14.513 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) ANI: 10008[0m
+[2019-01-30 15:31:14.513 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) DNIS: 201[0m
+[2019-01-30 15:31:14.513 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) LoggingTag: AAEP-2019030083114-17[0m
+[2019-01-30 15:31:14.514 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) Environment: development[0m
+[2019-01-30 15:31:14.514 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) Request: {"session___sessionid"=>"AAEP-2019030083114-17", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548319958709", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-30 15:31:14.514 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:31:14.529 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019030083114-17
+  request_parameters_key : d392a453-00e2-4cce-8845-63908c9ca6d0
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-30 15:31:14.547 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:31:14.547 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:31:14.583 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:31:14.616 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Wed Jan 30 2019 15:31:14 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030083114-17
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 15:31:26.897 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.633000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 45
+  main_debug.result           : -dep=Sales:grp=3
+  main_debug.sLogPower        : 71
+  main_debug.snr              : 25
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -dep=Sales:grp=3
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : เซล
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:31:26.907 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.633000
+  logging_tag : AAEP-2019030083114-17
+  result      : -dep=Sales:grp=3
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 15:31:26.909 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) confirmation_method_server[0m
+[2019-01-30 15:31:26.909 #11389] INFO : (AAEP-2019030083114-17) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 15:31:26.909 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:31:26.923 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 15:31:14 GMT+0700
+  logging_tag       : AAEP-2019030083114-17
+  result            : -dep=Sales:grp=3
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:31:26.938 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:31:26.941 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:31:26.942 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:31:26.962 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:31:27.001 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030083114-17
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_7.wav
+  next_prompts.2      : prompts/th-TH/sales.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 15:31:32.824 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.00000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 37
+  main_debug.result           : No
+  main_debug.sLogPower        : 75
+  main_debug.snr              : 38
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:31:32.832 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.00000
+  confidence_threshold        : 0.100000
+  logging_tag                 : AAEP-2019030083114-17
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Nomatch(rejected by confidence)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:31:32.840 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030083114-17
+  next_prompts.0 : prompts/th-TH/sorry_i_cannot_understand_you.wav
+  next_prompts.1 : prompts/th-TH/title_7.wav
+  next_prompts.2 : prompts/th-TH/sales.wav
+  next_prompts.3 : prompts/th-TH/.wav
+  next_prompts.4 : prompts/th-TH/is_it_correct.wav
+  status_message : Filled - Rejected by confidence score(Reprompt)
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 15:31:39.185 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.639000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 41
+  main_debug.result           : No
+  main_debug.sLogPower        : 77
+  main_debug.snr              : 36
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 1
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:31:39.202 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 12998
+  confirmation.played_prompts.0.1          : init1
+  confirmation.played_prompts.1.0          : 18839
+  confirmation.played_prompts.1.1          : retry1
+  confirmation.result                      : No
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 1
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 1
+  logging_tag                              : AAEP-2019030083114-17
+  result                                   : -dep=Sales:grp=3
+  retry_count.confirmation_no              : 0
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 0
+  status_message                           : Confirmation No
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 15:31:39.213 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019030083114-17
+  result                      : 
+  retry_count.confirmation_no : 1
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Confirmation No(reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:31:45.756 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.547000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 26
+  main_debug.result           : -emp=5:grp=2
+  main_debug.sLogPower        : 74
+  main_debug.snr              : 48
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=5:grp=2
+  retry_count.confirmation_no : 1
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : แอน
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:31:45.764 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.547000
+  logging_tag : AAEP-2019030083114-17
+  result      : -emp=5:grp=2
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 15:31:45.766 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) confirmation_method_server[0m
+[2019-01-30 15:31:45.766 #11389] INFO : (AAEP-2019030083114-17) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 15:31:45.766 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:31:45.781 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 15:31:14 GMT+0700
+  logging_tag       : AAEP-2019030083114-17
+  result            : -emp=5:grp=2
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 15:31:45.792 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -emp=5:grp=2[0m
+[2019-01-30 15:31:45.792 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : emp_5 | dep value : [0m
+[2019-01-30 15:31:45.792 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -emp=5:grp=2[0m
+[2019-01-30 15:31:45.792 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : emp_5 | dep value : [0m
+[2019-01-30 15:31:45.793 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -emp=5:grp=2[0m
+[2019-01-30 15:31:45.793 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : emp_5 | dep value : [0m
+[2019-01-30 15:31:45.793 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -emp=5:grp=2[0m
+[2019-01-30 15:31:45.793 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : emp_5 | dep value : [0m
+[2019-01-30 15:31:45.797 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:31:45.798 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:31:45.826 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:31:45.864 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019030083114-17
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_1.wav
+  next_prompts.2      : prompts/th-TH/emp_5.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-30 15:31:54.415 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019030083114-17
+  next_prompts.0              : prompts/th-TH/sorry_i_cannot_understand_you.wav
+  next_prompts.1              : prompts/th-TH/title_1.wav
+  next_prompts.2              : prompts/th-TH/emp_5.wav
+  next_prompts.3              : prompts/th-TH/.wav
+  next_prompts.4              : prompts/th-TH/is_it_correct.wav
+  result                      : failure
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 1
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Nomatch(Reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:03.470 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.189000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 28
+  main_debug.result           : No
+  main_debug.sLogPower        : 78
+  main_debug.snr              : 49
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 1
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:03.486 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 31862
+  confirmation.played_prompts.0.1          : init1
+  confirmation.played_prompts.1.0          : 40410
+  confirmation.played_prompts.1.1          : retry1
+  confirmation.result                      : No
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 1
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 1
+  logging_tag                              : AAEP-2019030083114-17
+  result                                   : -emp=5:grp=2
+  retry_count.confirmation_no              : 1
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 1
+  status_message                           : Confirmation No
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 15:32:03.498 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019030083114-17
+  result                      : 
+  retry_count.confirmation_no : 2
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 2
+  status_message              : Confirmation No(reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:09.490 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.722000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 49
+  main_debug.result           : -dep=Sales:grp=3
+  main_debug.sLogPower        : 81
+  main_debug.snr              : 31
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -dep=Sales:grp=3
+  retry_count.confirmation_no : 2
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 2
+  status_message              : Filled
+  utterance                   : เซล
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:09.498 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.722000
+  logging_tag : AAEP-2019030083114-17
+  result      : -dep=Sales:grp=3
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 15:32:09.500 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) confirmation_method_server[0m
+[2019-01-30 15:32:09.500 #11389] INFO : (AAEP-2019030083114-17) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 15:32:09.501 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:09.515 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 15:31:14 GMT+0700
+  logging_tag       : AAEP-2019030083114-17
+  result            : -dep=Sales:grp=3
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 15:32:09.526 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:09.526 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:09.526 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:09.526 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:09.527 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:09.527 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:09.527 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:09.527 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:09.532 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:32:09.532 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:09.553 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:32:15.176 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.478000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 17
+  main_debug.result           : No
+  main_debug.sLogPower        : 75
+  main_debug.snr              : 58
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:15.189 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 55589
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : No
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019030083114-17
+  result                                   : -dep=Sales:grp=3
+  retry_count.confirmation_no              : 2
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 2
+  status_message                           : Confirmation No
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 15:32:15.196 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019030083114-17
+  result                      : 
+  retry_count.confirmation_no : 3
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 3
+  status_message              : Confirmation No(reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:21.266 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.677000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 35
+  main_debug.result           : -dep=Sales:grp=3
+  main_debug.sLogPower        : 79
+  main_debug.snr              : 44
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -dep=Sales:grp=3
+  retry_count.confirmation_no : 3
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 3
+  status_message              : Filled
+  utterance                   : เซล
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:21.274 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.677000
+  logging_tag : AAEP-2019030083114-17
+  result      : -dep=Sales:grp=3
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-30 15:32:21.275 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) confirmation_method_server[0m
+[2019-01-30 15:32:21.276 #11389] INFO : (AAEP-2019030083114-17) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-30 15:32:21.276 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:21.289 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Wed Jan 30 2019 15:31:14 GMT+0700
+  logging_tag       : AAEP-2019030083114-17
+  result            : -dep=Sales:grp=3
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-30 15:32:21.299 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:21.299 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:21.299 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:21.299 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:21.300 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:21.300 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:21.300 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test : -dep=Sales:grp=3[0m
+[2019-01-30 15:32:21.300 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) test emp value : sales | dep value : [0m
+[2019-01-30 15:32:21.303 #11389] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-30 15:32:21.303 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:21.318 #11389] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-30 15:32:26.922 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.971000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019030083114-17
+  main_debug.nLogPower        : 22
+  main_debug.result           : No
+  main_debug.sLogPower        : 77
+  main_debug.snr              : 54
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-30 15:32:26.936 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 67351
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : No
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019030083114-17
+  result                                   : -dep=Sales:grp=3
+  retry_count.confirmation_no              : 3
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 3
+  status_message                           : Confirmation No
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-30 15:32:26.963 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/action (Client Request)
+params => {
+  confidence                      : 0.677000
+  confirmation_played_prompts.0.0 : 12998
+  confirmation_played_prompts.0.1 : init1
+  confirmation_played_prompts.1.0 : 18839
+  confirmation_played_prompts.1.1 : retry1
+  confirmation_played_prompts.2.0 : 31862
+  confirmation_played_prompts.2.1 : init1
+  confirmation_played_prompts.3.0 : 40410
+  confirmation_played_prompts.3.1 : retry1
+  confirmation_played_prompts.4.0 : 55589
+  confirmation_played_prompts.4.1 : init1
+  confirmation_played_prompts.5.0 : 67351
+  confirmation_played_prompts.5.1 : init1
+  dialog_end_time                 : Wed Jan 30 2019 15:32:26 GMT+0700
+  dialog_result                   : T
+  dialog_start_time               : Wed Jan 30 2019 15:31:14 GMT+0700
+  last_input_method               : voice
+  logging_tag                     : AAEP-2019030083114-17
+  played_prompts.0.0              : 614
+  played_prompts.0.1              : init1
+  played_prompts.1.0              : 25220
+  played_prompts.1.1              : reject1
+  played_prompts.2.0              : 49505
+  played_prompts.2.1              : reject2
+  played_prompts.3.0              : 61202
+  played_prompts.3.1              : reject2
+  result                          : failure
+  retry_counts_json               : [{"main": {"retry": 4,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 4}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 1,"reject": 0,"retry": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 1,"reject": 0,"retry": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}}]
+  utterance                       : เซล
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-30 15:32:26.963 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) action[0m
+[2019-01-30 15:32:26.963 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) failure[0m
+[2019-01-30 15:32:26.963 #11389] INFO : [0;94;49m(AAEP-2019030083114-17) action is failure[0m
+[2019-01-30 15:32:26.963 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:26.965 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:26.975 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030083114-17
+  result         : failure
+  status_message : Dialog End - true.vxml
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 15:32:26.983 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /true.vxml (Client Request)
+params => {
+  ani         : 10008
+  dnis        : 201
+  logging_tag : AAEP-2019030083114-17
+  dialog_name : true
+}[0m
+[2019-01-30 15:32:27.098 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  _event         : error.badfetch.http.500
+  _message       : Error fetching document true.vxml
+  error_count    : 0
+  logging_tag    : AAEP-2019030083114-17
+  status_message : Event catched
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 15:32:27.137 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/event_action (Client Request)
+params => {
+  _event                          : error.badfetch.http.500
+  _message                        : Error fetching document true.vxml
+  confirmation_played_prompts.0.0 : 12998
+  confirmation_played_prompts.0.1 : init1
+  confirmation_played_prompts.1.0 : 18839
+  confirmation_played_prompts.1.1 : retry1
+  confirmation_played_prompts.2.0 : 31862
+  confirmation_played_prompts.2.1 : init1
+  confirmation_played_prompts.3.0 : 40410
+  confirmation_played_prompts.3.1 : retry1
+  confirmation_played_prompts.4.0 : 55589
+  confirmation_played_prompts.4.1 : init1
+  confirmation_played_prompts.5.0 : 67351
+  confirmation_played_prompts.5.1 : init1
+  dialog_end_time                 : Wed Jan 30 2019 15:32:26 GMT+0700
+  dialog_result                   : E
+  dialog_start_time               : Wed Jan 30 2019 15:31:14 GMT+0700
+  logging_tag                     : AAEP-2019030083114-17
+  played_prompts.0.0              : 614
+  played_prompts.0.1              : init1
+  played_prompts.1.0              : 25220
+  played_prompts.1.1              : reject1
+  played_prompts.2.0              : 49505
+  played_prompts.2.1              : reject2
+  played_prompts.3.0              : 61202
+  played_prompts.3.1              : reject2
+  retry_counts_json               : [{"main": {"retry": 4,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 4}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 1,"reject": 0,"retry": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 1,"reject": 0,"retry": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}}]
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-30 15:32:27.138 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:27.140 #11389] INFO : (AAEP-2019030083114-17) Session information is saving into redis
+[2019-01-30 15:32:27.151 #11389] INFO : [0;33;49m(AAEP-2019030083114-17) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019030083114-17
+  result         : failure
+  status_message : Dialog End - null
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-30 15:32:27.164 #11389] INFO : [0;35;49m(AAEP-2019030083114-17) GET /call_end_action (Client Request)
+params => {
+  ani             : 10008
+  call_end_time   : Wed Jan 30 2019 15:32:27 GMT+0700
+  call_result     : E
+  call_start_time : Wed Jan 30 2019 15:31:14 GMT+0700
+  destination     : 000
+  dialog_name     : main_menu_dialog
+  dnis            : 201
+  logging_tag     : AAEP-2019030083114-17
+}[0m

@@ -1,0 +1,1191 @@
+# Logfile created on 2019-01-21 10:09:17 +0700 by logger.rb/61378
+[2019-01-21 10:09:17.992 #1312] INFO : Initializing DialogModule
+[2019-01-21 10:09:17.993 #1312] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 10:09:17.993 #1312] INFO :   rack_env                       : development
+[2019-01-21 10:09:17.993 #1312] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 10:09:17.993 #1312] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 10:09:17.993 #1312] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 10:09:17.993 #1312] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 10:09:17.993 #1312] INFO :   language                       : th-TH
+[2019-01-21 10:09:17.994 #1312] INFO :   platform                       : avaya
+[2019-01-21 10:09:17.994 #1312] INFO :   redis_server                   : localhost
+[2019-01-21 10:09:17.994 #1312] INFO :   redis_server_port              : 6379
+[2019-01-21 10:09:17.994 #1312] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 10:09:17.994 #1312] INFO :   grammar_path                   : /grammars/
+[2019-01-21 10:09:17.994 #1312] INFO :   enable_tuning_tools            : false
+[2019-01-21 10:09:17.994 #1312] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 10:09:17.994 #1312] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 10:09:17.994 #1312] INFO :   log_level                      : info
+[2019-01-21 10:09:17.994 #1312] INFO :   enable_log_in_vxml             : true
+[2019-01-21 10:09:17.995 #1312] INFO :   log_http_method                : get
+[2019-01-21 10:09:17.995 #1312] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 10:09:17.995 #1312] INFO :   mmivr_enable                   : false
+[2019-01-21 10:09:17.995 #1312] INFO :   gvp_extension_enable           : false
+[2019-01-21 10:09:17.995 #1312] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 10:09:17.995 #1312] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 10:09:17.995 #1312] INFO :   use_server_time                : true
+[2019-01-21 10:09:17.995 #1312] INFO :   keep_vxml                      : false
+[2019-01-21 10:09:17.995 #1312] INFO :   enable_prompt_log              : false
+[2019-01-21 10:09:17.995 #1312] INFO :   use_json                       : true
+[2019-01-21 10:09:17.995 #1312] INFO :   next_main_enabled              : true
+[2019-01-21 10:09:17.996 #1312] INFO :   session_expire_sec             : 86400
+[2019-01-21 10:09:17.996 #1312] INFO :   enable_prompt_uploader         : false
+[2019-01-21 10:09:17.996 #1312] INFO :   enable_dialog_console          : false
+[2019-01-21 10:09:17.996 #1312] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 10:09:18.002 #1312] INFO : Initializing application
+[2019-01-21 10:09:18.002 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 10:09:18.002 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 10:09:18.002 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 10:09:18.003 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 10:09:18.004 #1312] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 10:09:18.007 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 10:09:18.008 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 10:09:18.010 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 10:09:18.012 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 10:09:18.012 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 10:09:18.013 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 10:09:18.014 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 10:09:18.015 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 10:09:18.015 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 10:09:18.016 #1312] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 10:09:18.016 #1312] INFO : Connecting to Redis server localhost:6379
+[2019-01-21 10:19:47.439 #2843] INFO : Initializing DialogModule
+[2019-01-21 10:19:47.439 #2843] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 10:19:47.439 #2843] INFO :   rack_env                       : development
+[2019-01-21 10:19:47.439 #2843] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 10:19:47.439 #2843] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 10:19:47.439 #2843] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 10:19:47.439 #2843] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 10:19:47.439 #2843] INFO :   language                       : th-TH
+[2019-01-21 10:19:47.439 #2843] INFO :   platform                       : avaya
+[2019-01-21 10:19:47.440 #2843] INFO :   redis_server                   : localhost
+[2019-01-21 10:19:47.440 #2843] INFO :   redis_server_port              : 6379
+[2019-01-21 10:19:47.440 #2843] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 10:19:47.440 #2843] INFO :   grammar_path                   : /grammars/
+[2019-01-21 10:19:47.440 #2843] INFO :   enable_tuning_tools            : false
+[2019-01-21 10:19:47.440 #2843] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 10:19:47.440 #2843] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 10:19:47.440 #2843] INFO :   log_level                      : info
+[2019-01-21 10:19:47.440 #2843] INFO :   enable_log_in_vxml             : true
+[2019-01-21 10:19:47.440 #2843] INFO :   log_http_method                : get
+[2019-01-21 10:19:47.440 #2843] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 10:19:47.440 #2843] INFO :   mmivr_enable                   : false
+[2019-01-21 10:19:47.441 #2843] INFO :   gvp_extension_enable           : false
+[2019-01-21 10:19:47.441 #2843] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 10:19:47.441 #2843] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 10:19:47.441 #2843] INFO :   use_server_time                : true
+[2019-01-21 10:19:47.441 #2843] INFO :   keep_vxml                      : false
+[2019-01-21 10:19:47.441 #2843] INFO :   enable_prompt_log              : false
+[2019-01-21 10:19:47.441 #2843] INFO :   use_json                       : true
+[2019-01-21 10:19:47.441 #2843] INFO :   next_main_enabled              : true
+[2019-01-21 10:19:47.441 #2843] INFO :   session_expire_sec             : 86400
+[2019-01-21 10:19:47.441 #2843] INFO :   enable_prompt_uploader         : false
+[2019-01-21 10:19:47.441 #2843] INFO :   enable_dialog_console          : false
+[2019-01-21 10:19:47.441 #2843] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 10:19:47.443 #2843] INFO : Initializing application
+[2019-01-21 10:19:47.443 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 10:19:47.443 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 10:19:47.443 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 10:19:47.444 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 10:19:47.444 #2843] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 10:19:47.445 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 10:19:47.446 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 10:19:47.448 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 10:19:47.450 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 10:19:47.451 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 10:19:47.452 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 10:19:47.453 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 10:19:47.454 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 10:19:47.454 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 10:19:47.455 #2843] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 10:19:47.455 #2843] INFO : Connecting to Redis server localhost:6379
+[2019-01-21 10:35:22.559 #5134] INFO : Initializing DialogModule
+[2019-01-21 10:35:22.559 #5134] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 10:35:22.559 #5134] INFO :   rack_env                       : development
+[2019-01-21 10:35:22.559 #5134] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 10:35:22.559 #5134] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 10:35:22.559 #5134] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 10:35:22.560 #5134] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 10:35:22.560 #5134] INFO :   language                       : th-TH
+[2019-01-21 10:35:22.560 #5134] INFO :   platform                       : avaya
+[2019-01-21 10:35:22.560 #5134] INFO :   redis_server                   : localhost
+[2019-01-21 10:35:22.560 #5134] INFO :   redis_server_port              : 6379
+[2019-01-21 10:35:22.560 #5134] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 10:35:22.560 #5134] INFO :   grammar_path                   : /grammars/
+[2019-01-21 10:35:22.560 #5134] INFO :   enable_tuning_tools            : false
+[2019-01-21 10:35:22.560 #5134] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 10:35:22.560 #5134] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 10:35:22.560 #5134] INFO :   log_level                      : info
+[2019-01-21 10:35:22.560 #5134] INFO :   enable_log_in_vxml             : true
+[2019-01-21 10:35:22.561 #5134] INFO :   log_http_method                : get
+[2019-01-21 10:35:22.561 #5134] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 10:35:22.561 #5134] INFO :   mmivr_enable                   : false
+[2019-01-21 10:35:22.561 #5134] INFO :   gvp_extension_enable           : false
+[2019-01-21 10:35:22.561 #5134] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 10:35:22.561 #5134] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 10:35:22.561 #5134] INFO :   use_server_time                : true
+[2019-01-21 10:35:22.561 #5134] INFO :   keep_vxml                      : false
+[2019-01-21 10:35:22.561 #5134] INFO :   enable_prompt_log              : false
+[2019-01-21 10:35:22.561 #5134] INFO :   use_json                       : true
+[2019-01-21 10:35:22.561 #5134] INFO :   next_main_enabled              : true
+[2019-01-21 10:35:22.562 #5134] INFO :   session_expire_sec             : 86400
+[2019-01-21 10:35:22.562 #5134] INFO :   enable_prompt_uploader         : false
+[2019-01-21 10:35:22.562 #5134] INFO :   enable_dialog_console          : false
+[2019-01-21 10:35:22.562 #5134] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 10:35:22.563 #5134] INFO : Initializing application
+[2019-01-21 10:35:22.563 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 10:35:22.564 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 10:35:22.564 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 10:35:22.564 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 10:35:22.565 #5134] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 10:35:22.566 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 10:35:22.567 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 10:35:22.568 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 10:35:22.572 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 10:35:22.573 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 10:35:22.574 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 10:35:22.575 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 10:35:22.575 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 10:35:22.575 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 10:35:22.576 #5134] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 10:35:22.576 #5134] INFO : Connecting to Redis server localhost:6379
+[2019-01-21 14:54:29.738 #27175] INFO : Initializing DialogModule
+[2019-01-21 14:54:29.738 #27175] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 14:54:29.738 #27175] INFO :   rack_env                       : development
+[2019-01-21 14:54:29.738 #27175] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 14:54:29.738 #27175] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 14:54:29.738 #27175] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 14:54:29.738 #27175] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 14:54:29.738 #27175] INFO :   language                       : th-TH
+[2019-01-21 14:54:29.738 #27175] INFO :   platform                       : avaya
+[2019-01-21 14:54:29.738 #27175] INFO :   redis_server                   : localhost
+[2019-01-21 14:54:29.738 #27175] INFO :   redis_server_port              : 6379
+[2019-01-21 14:54:29.739 #27175] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 14:54:29.739 #27175] INFO :   grammar_path                   : /grammars/
+[2019-01-21 14:54:29.739 #27175] INFO :   enable_tuning_tools            : false
+[2019-01-21 14:54:29.739 #27175] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 14:54:29.739 #27175] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 14:54:29.739 #27175] INFO :   log_level                      : info
+[2019-01-21 14:54:29.739 #27175] INFO :   enable_log_in_vxml             : true
+[2019-01-21 14:54:29.739 #27175] INFO :   log_http_method                : get
+[2019-01-21 14:54:29.739 #27175] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 14:54:29.739 #27175] INFO :   mmivr_enable                   : false
+[2019-01-21 14:54:29.740 #27175] INFO :   gvp_extension_enable           : false
+[2019-01-21 14:54:29.740 #27175] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 14:54:29.740 #27175] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 14:54:29.740 #27175] INFO :   use_server_time                : true
+[2019-01-21 14:54:29.740 #27175] INFO :   keep_vxml                      : false
+[2019-01-21 14:54:29.740 #27175] INFO :   enable_prompt_log              : false
+[2019-01-21 14:54:29.740 #27175] INFO :   use_json                       : true
+[2019-01-21 14:54:29.740 #27175] INFO :   next_main_enabled              : true
+[2019-01-21 14:54:29.740 #27175] INFO :   session_expire_sec             : 86400
+[2019-01-21 14:54:29.740 #27175] INFO :   enable_prompt_uploader         : false
+[2019-01-21 14:54:29.741 #27175] INFO :   enable_dialog_console          : false
+[2019-01-21 14:54:29.741 #27175] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 14:54:29.745 #27175] INFO : Initializing application
+[2019-01-21 14:54:29.746 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 14:54:29.746 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 14:54:29.746 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 14:54:29.746 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 14:54:29.747 #27175] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 14:54:29.748 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 14:54:29.749 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 14:54:29.751 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 14:54:29.753 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 14:54:29.753 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 14:54:29.754 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 14:54:29.754 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 14:54:29.755 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 14:54:29.755 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 14:54:29.755 #27175] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 14:54:29.755 #27175] INFO : Connecting to Redis server localhost:6379
+[2019-01-21 15:04:41.830 #27175] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019021080442-4
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548057729159
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-21 15:04:41.903 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:04:41.958 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019021080442-4
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-21 15:04:41.970 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019021080442-4
+  request_parameters_key : 46e65b03-24fa-4d3c-a806-3c8c3c6be769
+}[0m
+[2019-01-21 15:04:41.971 #27175] INFO : [0;94;49m(AAEP-2019021080442-4) ANI: 10008[0m
+[2019-01-21 15:04:41.972 #27175] INFO : [0;94;49m(AAEP-2019021080442-4) DNIS: 201[0m
+[2019-01-21 15:04:41.972 #27175] INFO : [0;94;49m(AAEP-2019021080442-4) LoggingTag: AAEP-2019021080442-4[0m
+[2019-01-21 15:04:41.972 #27175] INFO : [0;94;49m(AAEP-2019021080442-4) Environment: development[0m
+[2019-01-21 15:04:41.972 #27175] INFO : [0;94;49m(AAEP-2019021080442-4) Request: {"session___sessionid"=>"AAEP-2019021080442-4", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548057729159", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-21 15:04:41.972 #27175] INFO : (AAEP-2019021080442-4) Session information is saving into redis
+[2019-01-21 15:04:41.979 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019021080442-4
+  request_parameters_key : 46e65b03-24fa-4d3c-a806-3c8c3c6be769
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-21 15:04:41.999 #27175] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:04:41.999 #27175] INFO : (AAEP-2019021080442-4) Session information is saving into redis
+[2019-01-21 15:04:42.025 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:04:42.057 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Mon Jan 21 2019 15:04:42 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019021080442-4
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-21 15:04:53.074 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /main_menu_dialog/dump (Client Request)
+params => {
+  _event         : connection.disconnect.hangup
+  _message       : Caller hung up during recognition
+  error_count    : 0
+  logging_tag    : AAEP-2019021080442-4
+  status_message : Event catched
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-21 15:04:53.089 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /main_menu_dialog/event_action (Client Request)
+params => {
+  _event             : connection.disconnect.hangup
+  _message           : Caller hung up during recognition
+  dialog_end_time    : Mon Jan 21 2019 15:04:53 GMT+0700
+  dialog_result      : H
+  dialog_start_time  : Mon Jan 21 2019 15:04:42 GMT+0700
+  logging_tag        : AAEP-2019021080442-4
+  played_prompts.0.0 : 437
+  played_prompts.0.1 : init1
+  retry_counts_json  : [{"main": {"retry": 0,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 0}}]
+  dialog_name        : main_menu_dialog
+}[0m
+[2019-01-21 15:04:53.089 #27175] INFO : (AAEP-2019021080442-4) Session information is saving into redis
+[2019-01-21 15:04:53.091 #27175] INFO : (AAEP-2019021080442-4) Session information is saving into redis
+[2019-01-21 15:04:53.102 #27175] INFO : [0;33;49m(AAEP-2019021080442-4) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019021080442-4
+  result         : 
+  status_message : Dialog End - null
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-21 15:04:53.113 #27175] INFO : [0;35;49m(AAEP-2019021080442-4) GET /call_end_action (Client Request)
+params => {
+  ani             : 10008
+  call_end_time   : Mon Jan 21 2019 15:04:53 GMT+0700
+  call_result     : H
+  call_start_time : Mon Jan 21 2019 15:04:42 GMT+0700
+  destination     : 000
+  dialog_name     : main_menu_dialog
+  dnis            : 201
+  logging_tag     : AAEP-2019021080442-4
+}[0m
+[2019-01-21 15:07:53.034 #27175] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019021080753-11
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548057729159
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-21 15:07:53.105 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:07:53.124 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019021080753-11
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-21 15:07:53.135 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019021080753-11
+  request_parameters_key : 355be54a-f869-458e-b7e8-a5e0a2b92be5
+}[0m
+[2019-01-21 15:07:53.137 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) ANI: 10008[0m
+[2019-01-21 15:07:53.137 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) DNIS: 201[0m
+[2019-01-21 15:07:53.137 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) LoggingTag: AAEP-2019021080753-11[0m
+[2019-01-21 15:07:53.137 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) Environment: development[0m
+[2019-01-21 15:07:53.138 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) Request: {"session___sessionid"=>"AAEP-2019021080753-11", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548057729159", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-21 15:07:53.138 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:07:53.143 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019021080753-11
+  request_parameters_key : 355be54a-f869-458e-b7e8-a5e0a2b92be5
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-21 15:07:53.164 #27175] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:07:53.164 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:07:53.190 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:07:53.228 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Mon Jan 21 2019 15:07:53 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019021080753-11
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-21 15:08:05.693 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.505000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021080753-11
+  main_debug.nLogPower        : 55
+  main_debug.result           : -emp=3:grp=2
+  main_debug.sLogPower        : 63
+  main_debug.snr              : 7
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=3:grp=2
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : หมู
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:08:05.702 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.505000
+  logging_tag : AAEP-2019021080753-11
+  result      : -emp=3:grp=2
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-21 15:08:05.704 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) confirmation_method_server[0m
+[2019-01-21 15:08:05.704 #27175] INFO : (AAEP-2019021080753-11) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-21 15:08:05.704 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:05.718 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Mon Jan 21 2019 15:07:53 GMT+0700
+  logging_tag       : AAEP-2019021080753-11
+  result            : -emp=3:grp=2
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-21 15:08:05.731 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : -emp=3:grp=2[0m
+[2019-01-21 15:08:05.731 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_3 | dep value : [0m
+[2019-01-21 15:08:05.731 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : -emp=3:grp=2[0m
+[2019-01-21 15:08:05.731 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_3 | dep value : [0m
+[2019-01-21 15:08:05.731 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : -emp=3:grp=2[0m
+[2019-01-21 15:08:05.732 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_3 | dep value : [0m
+[2019-01-21 15:08:05.732 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : -emp=3:grp=2[0m
+[2019-01-21 15:08:05.732 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_3 | dep value : [0m
+[2019-01-21 15:08:05.737 #27175] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:08:05.737 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:05.758 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:08:05.797 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019021080753-11
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_1.wav
+  next_prompts.2      : prompts/th-TH/emp_3.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-21 15:08:14.479 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019021080753-11
+  next_prompts.0              : prompts/th-TH/sorry_i_cannot_understand_you.wav
+  next_prompts.1              : prompts/th-TH/title_1.wav
+  next_prompts.2              : prompts/th-TH/emp_3.wav
+  next_prompts.3              : prompts/th-TH/.wav
+  next_prompts.4              : prompts/th-TH/is_it_correct.wav
+  result                      : failure
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 1
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Nomatch(Reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:08:23.446 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.681000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021080753-11
+  main_debug.nLogPower        : 46
+  main_debug.result           : No
+  main_debug.sLogPower        : 67
+  main_debug.snr              : 21
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 1
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:08:23.464 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 13175
+  confirmation.played_prompts.0.1          : init1
+  confirmation.played_prompts.1.0          : 21855
+  confirmation.played_prompts.1.1          : retry1
+  confirmation.result                      : No
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 1
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 1
+  logging_tag                              : AAEP-2019021080753-11
+  result                                   : -emp=3:grp=2
+  retry_count.confirmation_no              : 0
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 0
+  status_message                           : Confirmation No
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-21 15:08:23.472 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019021080753-11
+  result                      : 
+  retry_count.confirmation_no : 1
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Confirmation No(reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:08:29.595 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.769000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021080753-11
+  main_debug.nLogPower        : 38
+  main_debug.result           : title=2-emp=1:grp=2
+  main_debug.sLogPower        : 75
+  main_debug.snr              : 37
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : title=2-emp=1:grp=2
+  retry_count.confirmation_no : 1
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : พี่ พร
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:08:29.602 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.769000
+  logging_tag : AAEP-2019021080753-11
+  result      : title=2-emp=1:grp=2
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-21 15:08:29.603 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) confirmation_method_server[0m
+[2019-01-21 15:08:29.604 #27175] INFO : (AAEP-2019021080753-11) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-21 15:08:29.604 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:29.618 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Mon Jan 21 2019 15:07:53 GMT+0700
+  logging_tag       : AAEP-2019021080753-11
+  result            : title=2-emp=1:grp=2
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-21 15:08:29.630 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : title=2-emp=1:grp=2[0m
+[2019-01-21 15:08:29.630 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_1 | dep value : [0m
+[2019-01-21 15:08:29.630 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : title=2-emp=1:grp=2[0m
+[2019-01-21 15:08:29.630 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_1 | dep value : [0m
+[2019-01-21 15:08:29.630 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : title=2-emp=1:grp=2[0m
+[2019-01-21 15:08:29.630 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_1 | dep value : [0m
+[2019-01-21 15:08:29.631 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test : title=2-emp=1:grp=2[0m
+[2019-01-21 15:08:29.631 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) test emp value : emp_1 | dep value : [0m
+[2019-01-21 15:08:29.634 #27175] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:08:29.635 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:29.655 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:08:29.689 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019021080753-11
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_2.wav
+  next_prompts.2      : prompts/th-TH/emp_1.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-21 15:08:38.113 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.588000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021080753-11
+  main_debug.nLogPower        : 31
+  main_debug.result           : Yes
+  main_debug.sLogPower        : 71
+  main_debug.snr              : 40
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : Yes
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ใช่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:08:38.131 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 37067
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : Yes
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019021080753-11
+  result                                   : title=2-emp=1:grp=2
+  retry_count.confirmation_no              : 1
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 1
+  status_message                           : Confirmation Yes
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-21 15:08:38.146 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/action (Client Request)
+params => {
+  confidence                      : 0.769000
+  confirmation_played_prompts.0.0 : 13175
+  confirmation_played_prompts.0.1 : init1
+  confirmation_played_prompts.1.0 : 21855
+  confirmation_played_prompts.1.1 : retry1
+  confirmation_played_prompts.2.0 : 37067
+  confirmation_played_prompts.2.1 : init1
+  dialog_end_time                 : Mon Jan 21 2019 15:08:38 GMT+0700
+  dialog_result                   : S
+  dialog_start_time               : Mon Jan 21 2019 15:07:53 GMT+0700
+  last_input_method               : voice
+  logging_tag                     : AAEP-2019021080753-11
+  played_prompts.0.0              : 603
+  played_prompts.0.1              : init1
+  played_prompts.1.0              : 30859
+  played_prompts.1.1              : reject1
+  result                          : title=2-emp=1:grp=2
+  retry_counts_json               : [{"main": {"retry": 1,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 1,"reject": 0,"retry": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}}]
+  utterance                       : พี่ พร
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-21 15:08:38.148 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) action[0m
+[2019-01-21 15:08:38.148 #27175] INFO : [0;94;49m(AAEP-2019021080753-11) title=2-emp=1:grp=2[0m
+[2019-01-21 15:08:38.148 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:38.151 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:38.162 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019021080753-11
+  result         : title=2-emp=1:grp=2
+  status_message : Dialog End - transfer_block.vxml
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-21 15:08:38.169 #27175] INFO : [0;33;49m(AAEP-2019021080753-11) GET /transfer_block.vxml (Client Request)
+params => {
+  ani         : 10008
+  dnis        : 201
+  logging_tag : AAEP-2019021080753-11
+  dialog_name : transfer_block
+}[0m
+[2019-01-21 15:08:38.170 #27175] INFO : (AAEP-2019021080753-11) Session information is saving into redis
+[2019-01-21 15:08:38.180 #27175] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:08:38.239 #27175] INFO : [0;35;49m(AAEP-2019021080753-11) GET /call_end_action (Client Request)
+params => {
+  ani             : 10008
+  call_end_time   : Mon Jan 21 2019 15:08:38 GMT+0700
+  call_start_time : Mon Jan 21 2019 15:07:53 GMT+0700
+  destination     : 000
+  dialog_name     : transfer_block
+  dnis            : 201
+  logging_tag     : AAEP-2019021080753-11
+}[0m
+[2019-01-21 15:10:05.284 #29476] INFO : Initializing DialogModule
+[2019-01-21 15:10:05.285 #29476] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 15:10:05.285 #29476] INFO :   rack_env                       : development
+[2019-01-21 15:10:05.285 #29476] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 15:10:05.285 #29476] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 15:10:05.285 #29476] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 15:10:05.285 #29476] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 15:10:05.285 #29476] INFO :   language                       : th-TH
+[2019-01-21 15:10:05.286 #29476] INFO :   platform                       : avaya
+[2019-01-21 15:10:05.286 #29476] INFO :   redis_server                   : localhost
+[2019-01-21 15:10:05.287 #29476] INFO :   redis_server_port              : 6379
+[2019-01-21 15:10:05.288 #29476] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 15:10:05.288 #29476] INFO :   grammar_path                   : /grammars/
+[2019-01-21 15:10:05.288 #29476] INFO :   enable_tuning_tools            : false
+[2019-01-21 15:10:05.288 #29476] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 15:10:05.289 #29476] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 15:10:05.289 #29476] INFO :   log_level                      : info
+[2019-01-21 15:10:05.289 #29476] INFO :   enable_log_in_vxml             : true
+[2019-01-21 15:10:05.289 #29476] INFO :   log_http_method                : get
+[2019-01-21 15:10:05.289 #29476] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 15:10:05.289 #29476] INFO :   mmivr_enable                   : false
+[2019-01-21 15:10:05.289 #29476] INFO :   gvp_extension_enable           : false
+[2019-01-21 15:10:05.289 #29476] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 15:10:05.289 #29476] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 15:10:05.289 #29476] INFO :   use_server_time                : true
+[2019-01-21 15:10:05.289 #29476] INFO :   keep_vxml                      : false
+[2019-01-21 15:10:05.289 #29476] INFO :   enable_prompt_log              : false
+[2019-01-21 15:10:05.289 #29476] INFO :   use_json                       : true
+[2019-01-21 15:10:05.289 #29476] INFO :   next_main_enabled              : true
+[2019-01-21 15:10:05.289 #29476] INFO :   session_expire_sec             : 86400
+[2019-01-21 15:10:05.289 #29476] INFO :   enable_prompt_uploader         : false
+[2019-01-21 15:10:05.289 #29476] INFO :   enable_dialog_console          : false
+[2019-01-21 15:10:05.289 #29476] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 15:10:05.291 #29476] INFO : Initializing application
+[2019-01-21 15:10:05.291 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 15:10:05.293 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 15:10:05.293 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 15:10:05.294 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 15:10:05.294 #29476] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 15:10:05.296 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 15:10:05.297 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 15:10:05.304 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 15:10:05.306 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 15:10:05.306 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 15:10:05.307 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 15:10:05.307 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 15:10:05.308 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 15:10:05.308 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 15:10:05.308 #29476] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 15:10:05.308 #29476] INFO : Connecting to Redis server localhost:6379
+[2019-01-21 15:10:07.882 #29476] INFO : [0;32;49m() GET /main.vxml (Client Request)
+params => {
+  session___sessionid   : AAEP-2019021081008-6
+  __VPapploggingurl     : https://192.168.1.16/axis/services/VPReport4
+  __VPapplog            : /axis2/services/VPAppLogService
+  __VPvpms              : 192.168.1.16
+  __VPappvars           : /axis2/services/VPAppVarsService
+  __VPVarAppDate        : 0
+  __VPVarAppURL         : https://192.168.1.16/axis/services/VPAppRuntimeVars
+  __VPVarGlobalDate     : 1548057729159
+  __VPbreadcrumb        : disabled
+  __VPmaxbackuplogfiles : 10
+  __VPlogname           : %default%aT13MDbMJo8Y3yhg
+  __VPlogpassword       : AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02
+  __VPloglevel          : Info
+  __VPappname           : 0:appRaccoon
+}[0m
+[2019-01-21 15:10:07.956 #29476] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:10:07.978 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /initialize/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019021081008-6
+  status_message : main.vxml started
+  dialog_name    : initialize
+}[0m
+[2019-01-21 15:10:07.989 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /entry_point (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019021081008-6
+  request_parameters_key : 161ee3cc-4d76-4be5-aab1-cdf9d9678d53
+}[0m
+[2019-01-21 15:10:07.995 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) ANI: 10008[0m
+[2019-01-21 15:10:07.995 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) DNIS: 201[0m
+[2019-01-21 15:10:07.995 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) LoggingTag: AAEP-2019021081008-6[0m
+[2019-01-21 15:10:07.995 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) Environment: development[0m
+[2019-01-21 15:10:07.995 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) Request: {"session___sessionid"=>"AAEP-2019021081008-6", "__VPapploggingurl"=>"https://192.168.1.16/axis/services/VPReport4", "__VPapplog"=>"/axis2/services/VPAppLogService", "__VPvpms"=>"192.168.1.16", "__VPappvars"=>"/axis2/services/VPAppVarsService", "__VPVarAppDate"=>"0", "__VPVarAppURL"=>"https://192.168.1.16/axis/services/VPAppRuntimeVars", "__VPVarGlobalDate"=>"1548057729159", "__VPbreadcrumb"=>"disabled", "__VPmaxbackuplogfiles"=>"10", "__VPlogname"=>"%default%aT13MDbMJo8Y3yhg", "__VPlogpassword"=>"AQ9CqzPk5seCYecRPyvpetscqKuO9rDZLPU21BMxH5UtDJuPmQ7ilSkFBU6ErK02", "__VPloglevel"=>"Info", "__VPappname"=>"0:appRaccoon"}[0m
+[2019-01-21 15:10:07.996 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:08.005 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog.vxml (Client Request)
+params => {
+  ani                    : 10008
+  dnis                   : 201
+  logging_tag            : AAEP-2019021081008-6
+  request_parameters_key : 161ee3cc-4d76-4be5-aab1-cdf9d9678d53
+  dialog_name            : main_menu_dialog
+}[0m
+[2019-01-21 15:10:08.025 #29476] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:10:08.026 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:08.049 #29476] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:10:08.091 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : Mon Jan 21 2019 15:10:08 GMT+0700
+  dialog_state        : main
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019021081008-6
+  next_prompts.0      : prompts/th-TH/welcome_to_amivoicethai.wav
+  next_prompts.1      : prompts/th-TH/to_employee.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-21 15:10:20.472 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.388000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021081008-6
+  main_debug.nLogPower        : 43
+  main_debug.result           : -emp=5:grp=1
+  main_debug.sLogPower        : 81
+  main_debug.snr              : 37
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=5:grp=1
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ศศิธร
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:10:20.487 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.388000
+  logging_tag : AAEP-2019021081008-6
+  result      : -emp=5:grp=1
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-21 15:10:20.488 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) confirmation_method_server[0m
+[2019-01-21 15:10:20.488 #29476] INFO : (AAEP-2019021081008-6) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-21 15:10:20.488 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:20.501 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Mon Jan 21 2019 15:10:08 GMT+0700
+  logging_tag       : AAEP-2019021081008-6
+  result            : -emp=5:grp=1
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-21 15:10:20.512 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:20.513 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:20.518 #29476] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:10:20.518 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:20.543 #29476] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:10:20.574 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  ani                 : 10008
+  current_dialog_name : main_menu_dialog
+  dialog_start_time   : 
+  dialog_state        : confirmation
+  dnis                : 201
+  error_count         : 0
+  logging_tag         : AAEP-2019021081008-6
+  next_prompts.0      : prompts/th-TH/calling_to_who.wav
+  next_prompts.1      : prompts/th-TH/title_1.wav
+  next_prompts.2      : prompts/th-TH/emp_5.wav
+  next_prompts.3      : prompts/th-TH/.wav
+  next_prompts.4      : prompts/th-TH/is_it_correct.wav
+  status_message      : Dialog Start
+  visit_count         : 1
+  dialog_name         : main_menu_dialog
+}[0m
+[2019-01-21 15:10:28.729 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.757000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021081008-6
+  main_debug.nLogPower        : 18
+  main_debug.result           : No
+  main_debug.sLogPower        : 78
+  main_debug.snr              : 60
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : No
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ไม่
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:10:28.747 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 12952
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : No
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019021081008-6
+  result                                   : -emp=5:grp=1
+  retry_count.confirmation_no              : 0
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 0
+  status_message                           : Confirmation No
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-21 15:10:28.757 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag                 : AAEP-2019021081008-6
+  result                      : 
+  retry_count.confirmation_no : 1
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Confirmation No(reprompt)
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:10:35.003 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.499000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021081008-6
+  main_debug.nLogPower        : 24
+  main_debug.result           : -emp=5:grp=1
+  main_debug.sLogPower        : 79
+  main_debug.snr              : 55
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : -emp=5:grp=1
+  retry_count.confirmation_no : 1
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 1
+  status_message              : Filled
+  utterance                   : ศศิธร
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:10:35.010 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/confirmation_method_server (Client Request)
+params => {
+  confidence  : 0.499000
+  logging_tag : AAEP-2019021081008-6
+  result      : -emp=5:grp=1
+  dialog_name : main_menu_dialog
+}[0m
+[2019-01-21 15:10:35.011 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) confirmation_method_server[0m
+[2019-01-21 15:10:35.011 #29476] INFO : (AAEP-2019021081008-6) MainMenuDialog.confirmation_method_server => confirm
+[2019-01-21 15:10:35.011 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:35.024 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_confirmation_dialog.vxml (Client Request)
+params => {
+  dialog_start_time : Mon Jan 21 2019 15:10:08 GMT+0700
+  logging_tag       : AAEP-2019021081008-6
+  result            : -emp=5:grp=1
+  dialog_name       : main_menu_confirmation_dialog
+}[0m
+[2019-01-21 15:10:35.036 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:35.036 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:35.036 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:35.037 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:35.037 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:35.037 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:35.037 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test : -emp=5:grp=1[0m
+[2019-01-21 15:10:35.037 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) test emp value : emp_5 | dep value : [0m
+[2019-01-21 15:10:35.043 #29476] WARN : DTMF grammar is not specified for main_menu_dialog
+[2019-01-21 15:10:35.043 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:35.064 #29476] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:10:44.394 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confidence                  : 0.146000
+  last_input_method           : voice
+  logging_tag                 : AAEP-2019021081008-6
+  main_debug.nLogPower        : 31
+  main_debug.result           : Yes
+  main_debug.sLogPower        : 76
+  main_debug.snr              : 45
+  main_debug.tooLong          : false
+  main_debug.tooLoud          : false
+  rejected_by_semantic_engine : false
+  result                      : Yes
+  retry_count.confirmation_no : 0
+  retry_count.noinput         : 0
+  retry_count.nomatch         : 0
+  retry_count.reject          : 0
+  retry_count.retry           : 0
+  status_message              : Filled
+  utterance                   : ถูก
+  dialog_name                 : main_menu_dialog
+}[0m
+[2019-01-21 15:10:44.407 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  confirmation.dialog_result               : S
+  confirmation.played_prompts.0.0          : 27480
+  confirmation.played_prompts.0.1          : init1
+  confirmation.result                      : Yes
+  confirmation.retry_count.confirmation_no : 0
+  confirmation.retry_count.noinput         : 0
+  confirmation.retry_count.nomatch         : 0
+  confirmation.retry_count.reject          : 0
+  confirmation.retry_count.retry           : 0
+  logging_tag                              : AAEP-2019021081008-6
+  result                                   : -emp=5:grp=1
+  retry_count.confirmation_no              : 1
+  retry_count.noinput                      : 0
+  retry_count.nomatch                      : 0
+  retry_count.reject                       : 0
+  retry_count.retry                        : 1
+  status_message                           : Confirmation Yes
+  dialog_name                              : main_menu_dialog
+}[0m
+[2019-01-21 15:10:44.427 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/action (Client Request)
+params => {
+  confidence                      : 0.499000
+  confirmation_played_prompts.0.0 : 12952
+  confirmation_played_prompts.0.1 : init1
+  confirmation_played_prompts.1.0 : 27480
+  confirmation_played_prompts.1.1 : init1
+  dialog_end_time                 : Mon Jan 21 2019 15:10:44 GMT+0700
+  dialog_result                   : S
+  dialog_start_time               : Mon Jan 21 2019 15:10:08 GMT+0700
+  last_input_method               : voice
+  logging_tag                     : AAEP-2019021081008-6
+  played_prompts.0.0              : 467
+  played_prompts.0.1              : init1
+  played_prompts.1.0              : 21144
+  played_prompts.1.1              : reject1
+  result                          : -emp=5:grp=1
+  retry_counts_json               : [{"main": {"retry": 1,"noinput": 0,"nomatch": 0,"reject": 0,"confirmation_no": 1}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}},{"confirmation": {"confirmation_no": 0,"noinput": 0,"nomatch": 0,"reject": 0,"retry": 0}}]
+  utterance                       : ศศิธร
+  dialog_name                     : main_menu_dialog
+}[0m
+[2019-01-21 15:10:44.427 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) action[0m
+[2019-01-21 15:10:44.428 #29476] INFO : [0;94;49m(AAEP-2019021081008-6) -emp=5:grp=1[0m
+[2019-01-21 15:10:44.428 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:44.430 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:44.440 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /main_menu_dialog/dump (Client Request)
+params => {
+  logging_tag    : AAEP-2019021081008-6
+  result         : -emp=5:grp=1
+  status_message : Dialog End - transfer_block.vxml
+  dialog_name    : main_menu_dialog
+}[0m
+[2019-01-21 15:10:44.447 #29476] INFO : [0;33;49m(AAEP-2019021081008-6) GET /transfer_block.vxml (Client Request)
+params => {
+  ani         : 10008
+  dnis        : 201
+  logging_tag : AAEP-2019021081008-6
+  dialog_name : transfer_block
+}[0m
+[2019-01-21 15:10:44.448 #29476] INFO : (AAEP-2019021081008-6) Session information is saving into redis
+[2019-01-21 15:10:44.459 #29476] INFO : [0;33;49m() GET /root.vxml (Client Request)
+params => {
+
+}[0m
+[2019-01-21 15:10:44.518 #29476] INFO : [0;35;49m(AAEP-2019021081008-6) GET /call_end_action (Client Request)
+params => {
+  ani             : 10008
+  call_end_time   : Mon Jan 21 2019 15:10:44 GMT+0700
+  call_start_time : Mon Jan 21 2019 15:10:08 GMT+0700
+  destination     : 000
+  dialog_name     : transfer_block
+  dnis            : 201
+  logging_tag     : AAEP-2019021081008-6
+}[0m
+[2019-01-21 15:11:26.843 #29647] INFO : Initializing DialogModule
+[2019-01-21 15:11:26.843 #29647] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 15:11:26.843 #29647] INFO :   rack_env                       : development
+[2019-01-21 15:11:26.843 #29647] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 15:11:26.843 #29647] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 15:11:26.843 #29647] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 15:11:26.843 #29647] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 15:11:26.843 #29647] INFO :   language                       : th-TH
+[2019-01-21 15:11:26.844 #29647] INFO :   platform                       : avaya
+[2019-01-21 15:11:26.844 #29647] INFO :   redis_server                   : localhost
+[2019-01-21 15:11:26.844 #29647] INFO :   redis_server_port              : 6379
+[2019-01-21 15:11:26.844 #29647] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 15:11:26.844 #29647] INFO :   grammar_path                   : /grammars/
+[2019-01-21 15:11:26.844 #29647] INFO :   enable_tuning_tools            : false
+[2019-01-21 15:11:26.844 #29647] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 15:11:26.844 #29647] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 15:11:26.844 #29647] INFO :   log_level                      : info
+[2019-01-21 15:11:26.844 #29647] INFO :   enable_log_in_vxml             : true
+[2019-01-21 15:11:26.844 #29647] INFO :   log_http_method                : get
+[2019-01-21 15:11:26.844 #29647] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 15:11:26.844 #29647] INFO :   mmivr_enable                   : false
+[2019-01-21 15:11:26.845 #29647] INFO :   gvp_extension_enable           : false
+[2019-01-21 15:11:26.845 #29647] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 15:11:26.845 #29647] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 15:11:26.845 #29647] INFO :   use_server_time                : true
+[2019-01-21 15:11:26.845 #29647] INFO :   keep_vxml                      : false
+[2019-01-21 15:11:26.845 #29647] INFO :   enable_prompt_log              : false
+[2019-01-21 15:11:26.845 #29647] INFO :   use_json                       : true
+[2019-01-21 15:11:26.845 #29647] INFO :   next_main_enabled              : true
+[2019-01-21 15:11:26.845 #29647] INFO :   session_expire_sec             : 86400
+[2019-01-21 15:11:26.845 #29647] INFO :   enable_prompt_uploader         : false
+[2019-01-21 15:11:26.845 #29647] INFO :   enable_dialog_console          : false
+[2019-01-21 15:11:26.845 #29647] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 15:11:26.847 #29647] INFO : Initializing application
+[2019-01-21 15:11:26.847 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 15:11:26.847 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 15:11:26.847 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 15:11:26.848 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 15:11:26.848 #29647] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 15:11:26.849 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 15:11:26.850 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 15:11:26.852 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 15:11:26.854 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 15:11:26.854 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 15:11:26.855 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 15:11:26.855 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 15:11:26.856 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 15:11:26.856 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 15:11:26.856 #29647] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 15:11:26.856 #29647] INFO : Connecting to Redis server localhost:6379
+[2019-01-21 15:12:34.475 #29790] INFO : Initializing DialogModule
+[2019-01-21 15:12:34.475 #29790] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-21 15:12:34.475 #29790] INFO :   rack_env                       : development
+[2019-01-21 15:12:34.475 #29790] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-21 15:12:34.475 #29790] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-21 15:12:34.475 #29790] INFO :   default_external_encoding      : UTF-8
+[2019-01-21 15:12:34.475 #29790] INFO :   default_internal_encoding      : UTF-8
+[2019-01-21 15:12:34.475 #29790] INFO :   language                       : th-TH
+[2019-01-21 15:12:34.475 #29790] INFO :   platform                       : avaya
+[2019-01-21 15:12:34.475 #29790] INFO :   redis_server                   : localhost
+[2019-01-21 15:12:34.475 #29790] INFO :   redis_server_port              : 6379
+[2019-01-21 15:12:34.475 #29790] INFO :   audio_prompt_path              : /prompts/
+[2019-01-21 15:12:34.475 #29790] INFO :   grammar_path                   : /grammars/
+[2019-01-21 15:12:34.476 #29790] INFO :   enable_tuning_tools            : false
+[2019-01-21 15:12:34.476 #29790] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-21 15:12:34.476 #29790] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-21 15:12:34.476 #29790] INFO :   log_level                      : info
+[2019-01-21 15:12:34.476 #29790] INFO :   enable_log_in_vxml             : true
+[2019-01-21 15:12:34.476 #29790] INFO :   log_http_method                : get
+[2019-01-21 15:12:34.476 #29790] INFO :   is_a_part_of_call_flow         : false
+[2019-01-21 15:12:34.476 #29790] INFO :   mmivr_enable                   : false
+[2019-01-21 15:12:34.476 #29790] INFO :   gvp_extension_enable           : false
+[2019-01-21 15:12:34.476 #29790] INFO :   say_command                    : /usr/bin/say
+[2019-01-21 15:12:34.476 #29790] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-21 15:12:34.476 #29790] INFO :   use_server_time                : true
+[2019-01-21 15:12:34.476 #29790] INFO :   keep_vxml                      : false
+[2019-01-21 15:12:34.476 #29790] INFO :   enable_prompt_log              : false
+[2019-01-21 15:12:34.476 #29790] INFO :   use_json                       : true
+[2019-01-21 15:12:34.476 #29790] INFO :   next_main_enabled              : true
+[2019-01-21 15:12:34.477 #29790] INFO :   session_expire_sec             : 86400
+[2019-01-21 15:12:34.477 #29790] INFO :   enable_prompt_uploader         : false
+[2019-01-21 15:12:34.477 #29790] INFO :   enable_dialog_console          : false
+[2019-01-21 15:12:34.477 #29790] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-21 15:12:34.478 #29790] INFO : Initializing application
+[2019-01-21 15:12:34.478 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-21 15:12:34.479 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-21 15:12:34.479 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-21 15:12:34.479 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-21 15:12:34.479 #29790] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-21 15:12:34.480 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-21 15:12:34.481 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-21 15:12:34.483 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-21 15:12:34.483 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/amivoice_transfer_block.rb
+[2019-01-21 15:12:34.483 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-21 15:12:34.484 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-21 15:12:34.484 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-21 15:12:34.485 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-21 15:12:34.485 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-21 15:12:34.485 #29790] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-21 15:12:34.486 #29790] INFO : Connecting to Redis server localhost:6379

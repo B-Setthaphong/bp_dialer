@@ -1,0 +1,8 @@
+{
+    "git.ignoreLimitWarning": true,
+    "ruby.rubocop.executePath": "/Users/scb/.rbenv/versions/2.5.3/bin/",
+    //"ruby.rubocop.configFilePath": ".rubocop.yml",
+    "editor.formatOnSave": true,
+    "rufo.useBundler": false,
+    "rufo.exe": "/Users/scb/.rbenv/shims/rufo/"
+}

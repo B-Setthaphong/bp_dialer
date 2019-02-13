@@ -1,0 +1,50 @@
+# Logfile created on 2019-01-15 17:25:05 +0700 by logger.rb/61378
+[2019-01-15 17:25:05.132 #1254] INFO : Initializing DialogModule
+[2019-01-15 17:25:05.133 #1254] INFO :   ruby_version                   : 2.5.3-p105 (2018-10-18)
+[2019-01-15 17:25:05.133 #1254] INFO :   rack_env                       : development
+[2019-01-15 17:25:05.133 #1254] INFO :   amivoice_dialog_module_version : 1.2.1
+[2019-01-15 17:25:05.133 #1254] INFO :   application_root_path          : /Users/scb/RubySourceCode/bp_dialer
+[2019-01-15 17:25:05.133 #1254] INFO :   default_external_encoding      : UTF-8
+[2019-01-15 17:25:05.133 #1254] INFO :   default_internal_encoding      : UTF-8
+[2019-01-15 17:25:05.133 #1254] INFO :   language                       : th-TH
+[2019-01-15 17:25:05.133 #1254] INFO :   platform                       : avaya
+[2019-01-15 17:25:05.134 #1254] INFO :   redis_server                   : localhost
+[2019-01-15 17:25:05.134 #1254] INFO :   redis_server_port              : 6379
+[2019-01-15 17:25:05.134 #1254] INFO :   audio_prompt_path              : /prompts/
+[2019-01-15 17:25:05.134 #1254] INFO :   grammar_path                   : /grammars/
+[2019-01-15 17:25:05.134 #1254] INFO :   enable_tuning_tools            : false
+[2019-01-15 17:25:05.134 #1254] INFO :   tuning_tools_site              : http://localhost:3000
+[2019-01-15 17:25:05.134 #1254] INFO :   log_path                       : log/amivoice_dialog_module
+[2019-01-15 17:25:05.134 #1254] INFO :   log_level                      : info
+[2019-01-15 17:25:05.134 #1254] INFO :   enable_log_in_vxml             : true
+[2019-01-15 17:25:05.134 #1254] INFO :   log_http_method                : get
+[2019-01-15 17:25:05.134 #1254] INFO :   is_a_part_of_call_flow         : false
+[2019-01-15 17:25:05.135 #1254] INFO :   mmivr_enable                   : false
+[2019-01-15 17:25:05.135 #1254] INFO :   gvp_extension_enable           : false
+[2019-01-15 17:25:05.135 #1254] INFO :   say_command                    : /usr/bin/say
+[2019-01-15 17:25:05.135 #1254] INFO :   sox_command                    : /usr/local/bin/sox
+[2019-01-15 17:25:05.135 #1254] INFO :   use_server_time                : true
+[2019-01-15 17:25:05.135 #1254] INFO :   keep_vxml                      : false
+[2019-01-15 17:25:05.135 #1254] INFO :   enable_prompt_log              : false
+[2019-01-15 17:25:05.135 #1254] INFO :   use_json                       : true
+[2019-01-15 17:25:05.135 #1254] INFO :   next_main_enabled              : true
+[2019-01-15 17:25:05.135 #1254] INFO :   session_expire_sec             : 86400
+[2019-01-15 17:25:05.135 #1254] INFO :   enable_prompt_uploader         : false
+[2019-01-15 17:25:05.136 #1254] INFO :   enable_dialog_console          : false
+[2019-01-15 17:25:05.136 #1254] INFO :   dialog_console_filename        : config/dialog.yml
+[2019-01-15 17:25:05.140 #1254] INFO : Initializing application
+[2019-01-15 17:25:05.140 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/application_helper.rb
+[2019-01-15 17:25:05.141 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/lib/version.rb
+[2019-01-15 17:25:05.141 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/config/dialplan_v2
+[2019-01-15 17:25:05.141 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/named_prompt
+[2019-01-15 17:25:05.142 #1254] INFO :   /Users/scb/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/amivoice_dialog_module-1.2.1/system/dialog_modules/system_base_dialog
+[2019-01-15 17:25:05.144 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/application_base_dialog.rb
+[2019-01-15 17:25:05.145 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/dialog_modules/main_menu_dialog.rb
+[2019-01-15 17:25:05.146 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/agent_transfer_block.rb
+[2019-01-15 17:25:05.147 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/disconnected_block.rb
+[2019-01-15 17:25:05.148 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/return_block.rb
+[2019-01-15 17:25:05.149 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/system_error_block.rb
+[2019-01-15 17:25:05.149 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/too_many_errors_block.rb
+[2019-01-15 17:25:05.150 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_block.rb
+[2019-01-15 17:25:05.150 #1254] INFO :   /Users/scb/RubySourceCode/bp_dialer/app/blocks/transfer_to_agent_block.rb
+[2019-01-15 17:25:05.150 #1254] INFO : Connecting to Redis server localhost:6379

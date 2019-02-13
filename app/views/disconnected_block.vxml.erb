@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml xmlns="http://www.w3.org/2001/vxml"
+      xml:lang="<%=@language%>"
+      version="2.1"
+      application="root.vxml"
+      <% if Settings.gvp_extension_enable %>
+      xmlns:gvp="http://www.genesyslab.com/2006/vxml21-extension"
+      <% end %>
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.w3.org/2001/vxml
+                          http://www.w3.org/TR/2007/REC-voicexml21-20070619/vxml.xsd">
+
+  <form id="<%=@block_name%>">
+    <script>
+      var call_result = "H";
+      var destination = "Hang up by system";
+
+      <%- unless DisconnectedBlock.prompts.empty? %>
+      var prompts = <%=JSON.pretty_generate(prompt_path(DisconnectedBlock.prompts))%>;
+      <%- end %>
+      <%- DisconnectedBlock.namelist.each do |k, v| %>
+        <%- if v.instance_of? String %>
+      var <%=k.to_s%> = '<%=v%>';
+        <%- else %>
+      var <%=k.to_s%> = <%=v%>;
+        <%- end %>
+      <%- end %>
+    </script>
+
+    <%- unless DisconnectedBlock.prompts.empty? %>
+    <block name="announce">
+      <prompt bargein="false">
+        <foreach item="prompt" array="prompts">
+          <audio expr="prompt" />
+        </foreach>
+      </prompt>
+    </block>
+    <%- end %>
+
+    <block name="ending">
+      <%- if DisconnectedBlock.exit? %>
+      <script>
+        var dialog_name = application.current_dialog_name;
+      </script>
+      <%= call_end_action("dialog_name destination") %>
+      <exit/>
+      <%- else %>
+      <%- if DisconnectedBlock.namelist.empty? %>
+      <return namelist="call_result destination error_count"/>
+      <%- else %>
+      <return namelist="call_result destination error_count <%=DisconnectedBlock.namelist.map {|k,v|k.to_s}.join(' ') %>"/>
+      <%- end %>
+      <%- end %>
+    </block>
+  </form>
+</vxml>
